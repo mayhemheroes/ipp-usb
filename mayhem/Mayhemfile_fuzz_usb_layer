@@ -1,0 +1,8 @@
+project: ipp-usb
+target: fuzz_usb_layer
+cmds:
+  - cmd: /mayhem/fuzz_usb_layer
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_usb_layer/testsuite
